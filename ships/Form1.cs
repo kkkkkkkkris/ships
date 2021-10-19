@@ -85,6 +85,7 @@ namespace ships
             SqlDataAdapter n = new SqlDataAdapter(comand, con);
             n.Fill(b);
             dataGridView1.DataSource = b.Tables[0];
+            //FSJF
         }
     }
 }
