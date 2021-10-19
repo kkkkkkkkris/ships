@@ -29,13 +29,7 @@ namespace ships
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-                {
-                    if (Convert.ToInt32(dataGridView1[2, i].Value.ToString()) < 1920)
-                    {
-                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
-                    }
-                }
+                //3
             }
         }
 
@@ -73,7 +67,6 @@ namespace ships
             SqlDataAdapter n = new SqlDataAdapter(comand, con);
             n.Fill(b);
             dataGridView1.DataSource = b.Tables[0];
-            //222
         }
     }
 }
