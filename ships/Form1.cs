@@ -73,19 +73,7 @@ namespace ships
             SqlDataAdapter n = new SqlDataAdapter(comand, con);
             n.Fill(b);
             dataGridView1.DataSource = b.Tables[0];
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            string a = @"Data Source=PC-306-02;Initial Catalog=Ship;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection con = new SqlConnection(a);
-            con.Open();
-            DataSet b = new DataSet();
-            String comand = ("SELECT[Ship], COUNT(ship) * 25 as 'Участие в %' FROM[Outcomes] GROUP BY[Ship] ");
-            SqlDataAdapter n = new SqlDataAdapter(comand, con);
-            n.Fill(b);
-            dataGridView1.DataSource = b.Tables[0];
-            //FSJF
+            //222
         }
     }
 }
